@@ -1,0 +1,127 @@
+/* --- STILE GENERALE TAVOLO --- */
+body { 
+  background-color: #0f0f0f; 
+  font-family: 'Segoe UI', Tahoma, sans-serif; 
+  margin: 0; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  overflow: hidden; /* Impedisce lo scroll della pagina */
+}
+
+#game-container { 
+  display: flex; 
+  gap: 15px; 
+  width: 98%; 
+  height: 95vh; 
+}
+
+#sidebar { 
+  width: 220px; 
+  background: #1e1e1e; 
+  border: 2px solid #333; 
+  border-radius: 15px; 
+  padding: 15px; 
+  color: #ccc; 
+  box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+}
+
+#game-table { 
+  flex-grow: 1; 
+  background: #27ae60; 
+  border: 10px solid #3e2723; 
+  border-radius: 50px; 
+  padding: 20px; 
+  color: white; 
+  text-align: center; 
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.8); 
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- LE TUE CARTE NAPOLETANE - RITAGLIO ZOOMATO --- */
+.card {
+  display: inline-block;
+  width: 95px;  
+  height: 150px; 
+  background-image: url('https://gist.github.com/user-attachments/assets/1be959ff-f211-40ab-ac79-46e049cd336a');
+  background-repeat: no-repeat;
+  background-size: 1150px 730px; 
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin: 5px;
+  box-shadow: 3px 5px 12px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  background-color: white;
+}
+
+.card:hover { 
+  transform: translateY(-15px); 
+  border-color: #f1c40f;
+}
+
+/* --- COORDINATE RICALIBRATE PER CENTRATURA --- */
+.seme-Coppe   { background-position-y: -18px; }
+.seme-Ori     { background-position-y: -198px; }
+.seme-Bastoni { background-position-y: -381px; }
+.seme-Spade   { background-position-y: -563px; }
+
+.val-Asso    { background-position-x: -14px; }
+.val-2       { background-position-x: -127px; }
+.val-3       { background-position-x: -242px; }
+.val-4       { background-position-x: -354px; }
+.val-5       { background-position-x: -467px; }
+.val-6       { background-position-x: -582px; }
+.val-7       { background-position-x: -695px; }
+.val-Fante   { background-position-x: -809px; }
+.val-Cavallo { background-position-x: -922px; }
+.val-Re      { background-position-x: -1037px; }
+
+/* Dorso e Interfaccia */
+.card-back { 
+  background: #2980b9 !important; 
+  border: 2px solid white; 
+  background-image: none !important; 
+}
+
+#table-center { 
+  flex-grow: 1; 
+  border: 2px dashed rgba(255,255,255,0.1); 
+  border-radius: 40px; 
+  margin: 10px; 
+  padding: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+#info-bar { 
+  background: rgba(0,0,0,0.7); 
+  padding: 12px; 
+  border-radius: 15px; 
+  margin-bottom: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player-area { margin-top: auto; padding-bottom: 10px; }
+
+button { 
+  padding: 10px 20px; 
+  background: #f1c40f; 
+  border: none; 
+  font-weight: bold; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  color: #2c3e50; 
+  text-transform: uppercase;
+}
+
+button:hover { background: #d4ac0d; }
+
+h1 { margin-top: 0; color: #f1c40f; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+hr { border: 0; border-top: 1px solid #444; margin: 15px 0; }
